@@ -8,13 +8,19 @@ Cet OS propose un clone d'Ubuntu adapté, donc un système prêt à l'emploi mai
 
 Bref cet OS signé des américains System76 propose par défaut un ensemble de critères que je devais préalablement réaliser à la main.
 
-Téléchargement : (ATTENTIOn prendre la version INTEL/AMD et non la version NVIDIA. La 1ere installera de toute façon le pilote de la discrete card, tandis que la 2nde n'installe pas les drivers Intel, visiblement): 
+Téléchargement : (ATTENTION prendre la version INTEL/AMD et non la version NVIDIA. La 1ere installera de toute façon le pilote de la discrete card, tandis que la 2nde n'installe pas les drivers Intel, visiblement): 
 https://pop-iso.sfo2.cdn.digitaloceanspaces.com/19.10/amd64/intel/10/pop-os_19.10_amd64_intel_10.iso
 
 
 INSTALLATION :
 
-Pop! gère nativement l'UEFI grâce à systemd-boot : adieu Grub!
+Pop! gère nativement l'UEFI grâce à systemd-boot : adieu Grub! Il faut par contre laisser le champ du mot de passe vide dans le Bios pour conserver le secure boot sans devoir saisir de password :
+pressing F2 during Boot.
+
+Security -> set password
+Security -> Disable Secure Boot
+reset the password by setting the password again but letting the "New Password" fields blank
+Security Enable Secure Boot
 
 J'ai fait le choix d'installer à la main avec une partition EFI d'environ 500 MO, et une partition system+home sur le reste du SSD : Dropbox synchronise mes documents donc nul besoin de faire un /home à part pour les réinstalls comme à l'époque.
 
